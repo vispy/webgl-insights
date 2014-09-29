@@ -1,8 +1,10 @@
 # Big Data Visualization with WebGL: from Python to JavaScript
 
+Authors: Cyrille Rossant, Almar Klein, Luke Campagnola, Eric Larson, Nicolas Rougier, Kenneth D. Harris
+
 Here is the abstract proposal (deadline October 15).
 
-This is a graphics book for graphics/rendering communities, used to C++ and JavaScript rather than Python. Therefore, we should focus on 1) the OpenGL techniques for big data visualization, and 2) how we convert visualizations from Python to JavaScript/WebGL (detailing the different techniques).
+This is a graphics book for graphics/rendering communities, used to C++ and JavaScript rather than Python. Therefore, we should focus on 1) the OpenGL techniques for big data visualization, and/or 2) how we convert visualizations from Python to JavaScript/WebGL (detailing the different techniques).
 
 ## Overview
 
