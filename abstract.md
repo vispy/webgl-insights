@@ -31,3 +31,8 @@ In the second approach, the server emits OpenGL command calls that are proxied t
 In the last approach, the server exports an entire visualization to a standalone interactive HTML/JavaScript document. This method is restricted to relatively simple cases. However, users familiar with JavaScript can extend the exported document through a simple API.
 
 The last two approaches feature a new intermediate-level representation of all OpenGL constructs we need in Vispy. A program in this representation is described by a linear sequence of commands that instruct the interpreter to create buffers, define OpenGL programs, and draw the scene. This level of abstraction matches Vispy's object-oriented interface to OpenGL. We needed to define this new representation because the regular OpenGL API was too low-level for our needs.
+
+
+## Screenshots
+
+![Vispy screenshots](images/screenshots.png)
