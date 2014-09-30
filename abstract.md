@@ -1,12 +1,24 @@
 # Big Data Visualization with WebGL: from Python to JavaScript
 
-Authors: Cyrille Rossant, Almar Klein, Luke Campagnola, Eric Larson, Nicolas Rougier, Kenneth D. Harris
+Proposal for the [WebGL Insights](http://www.webglinsights.com/) community book.
 
-Here is the abstract proposal (deadline October 15).
+## Authors
 
-This is a graphics book for graphics/rendering communities, used to C++ and JavaScript rather than Python. Therefore, we should focus on the techniques we use to convert visualizations from Python to JavaScript/WebGL.
+* Cyrille Rossant (University College London)
+* Almar Klein ()
+* Luke Campagnola ()
+* Eric Larson ()
+* Nicolas Rougier (INRIA)
+* Kenneth D. Harris (University College London)
 
-## Introduction
+
+## Abstract
+
+The deluge of data arising in many disciplines calls for modern, innovative analysis methods. Whereas more and more processes can be automated, human supervision is nevertheless often required at most stages of the analysis pipelines. The primary way humans can apprehend data for explorative analysis is visualization. Effective big data visualization methods have to be interactive, fast, and scalable.
+
+Modern datasets may be large and high-dimensional, thus no static two-dimensional image can possibly convey all relevant information. A common technique is to create *interactive* visualizations, 
+
+
 
 * Need to visualize large volumes of data: emphasize on *scalability*, *speed*, and *interactivity* for data exploration.
 
