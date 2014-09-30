@@ -16,31 +16,18 @@ Proposal for the [WebGL Insights](http://www.webglinsights.com/) community book.
 
 The deluge of data arising in many disciplines calls for modern, innovative analysis methods. Whereas more and more processes can be automated, human supervision is nevertheless often required at most stages of the analysis pipelines. The primary way humans can apprehend data for explorative analysis is visualization. Effective big data visualization methods have to be *interactive*, *fast*, and *scalable*.
 
-Modern datasets may be large and high-dimensional, thus no static two-dimensional image can possibly convey all relevant information. A common technique is to create *interactive* visualizations, where the user can explore the various dimensions and subsets of the data. For such data exploration to be most effective, the rendering framerate need to be optimal even in situations of very large datasets. Finally, big data visualization methods need to support distributed and remote technologies in order to scale to huge datasets stored in cloud architectures.
+Modern datasets may be large and high-dimensional, thus no static two-dimensional image can possibly convey all relevant information. A common technique is to create *interactive* visualizations, where the user can explore the various dimensions and subsets of the data. For such data exploration to be most effective, the rendering framerate need to be optimal even with very large datasets. Finally, big data visualization methods need to support distributed and remote technologies in order to scale to huge datasets stored in cloud architectures.
 
+We developed specific rendering techniques with OpenGL ES 2.0 to leverage the computational power of graphics units for interactive big data visualization. We implemented these techniques in a Python library called Vispy. Python is one of the leading open source platforms for data analysis and numerical computing. Whereas there are many visualization and plotting libraries in Python, Vispy is one of the first libraries that lets scientists visualize millions of data points interactively at an optimal framerate. Vispy supports many types of datasets: scatter plots, digital signals, images, 3D models, and many others. Its flexible and layered architecture allows for the creation of custom visuals and rendering techniques like volume rendering or ray tracing. Vispy notably features an object-oriented interface to OpenGL that considerably simplifies the standard OpenGL API for the most common use-cases.
 
+Whereas Python is an excellent platform for data analysis, it lags behind the Web browser when it comes to remote visualization and sharing of interactive analysis reports. The need for remote data access is all the more critical that the size of common datasets increases faster than transfer speeds. Therefore, it is common practice for large datasets to be stored in the cloud, while analysts visualize the data remotely through the Web browser on a desktop or mobile device.
 
-* Need to visualize large volumes of data: emphasize on *scalability*, *speed*, and *interactivity* for data exploration.
+In this chapter, we will present the different techniques we have been developing in order to integrate our OpenGL-based Python library into the Web browser thanks to WebGL. The main challenge is to let scientists visualize their data without having them write any JavaScript code. Most scientists do not have a formal training in programming, and they would be unwilling to learn an additional language beyond Python. Therefore, we are aiming for an automatic and transparent Web backend for Vispy.
 
-* We developed specific techniques with OpenGL ES 2.0 to visualize different types of data. This lets us leverage the computational power of GPUs for big data visualization. Very brief mention of the techniques (no mention of Python at this stage):
+The first approach consists of letting the server render the scene locally and send the raster images to the browser in real-time. This technique may be useful on low-end clients.
 
-	* big scatter plots with point sprites
-	* images with contours
-	* multichannel digital signals in a single call
-	* high-quality polylines with GLSL agg
+In the second approach, the server emits OpenGL command calls that are proxied to the Web browser. The browser renders the scene by executing these commands through WebGL. This method may involve transfers of significant volumes of data. However, most of our visualization techniques involve GPU data transfers at initialization time only.
 
-## From Python to WebGL
+In the last approach, the server exports an entire visualization to a standalone interactive HTML/JavaScript document. This method is restricted to relatively simple cases. However, users familiar with JavaScript can extend the exported document through a simple API.
 
-* We implemented these techniques in Vispy, a Python library. Python is one of the leading open platforms for scientific data analysis. However, we also want to bring these Python/OpenGL visualizations to the browser thanks to WebGL. The reasons are:
-
-	* Large volumes of data are hard to move (inertia), so scientists want to access their data remotely through the Web browser.
-	* Contrary to Python, the Web browser is ideal for sharing data and analysis reports.
-	* The state-of-the-art of bringing Python to the browser for interactive data analysis is the IPython notebook. This platform provides a dynamic Web interface to access a Python server remotely. We will leverage part of this platform for Vispy.
-
-* We use different techniques to migrate OpenGL visualizations from Python to the Web browser:
-
-	* VNC streaming (server-side rendering)
-	* OpenGL streaming
-	* GLIR
-	* static export
-
+The last two approaches feature a new intermediate-level representation of all OpenGL constructs we need in Vispy. A program in this representation is described by a linear sequence of commands that instruct the interpreter to create buffers, define OpenGL programs, and draw the scene. This level of abstraction matches Vispy's object-oriented interface to OpenGL. We needed to define this new representation because the regular OpenGL API was too low-level for our needs.
