@@ -36,3 +36,5 @@ The last two approaches feature a new intermediate-level representation of all O
 ## Screenshots
 
 ![Vispy screenshots](images/screenshots.png)
+
+A few examples of scientific visualizations with Vispy. A. A simple example illustrating the use of vertex and fragment shaders. B. Scatter plot with point sprites. C. High-performance multi-channel digital signal viewer: all signals are rendered with a single OpenGL API call. D. Graph rendering. E. 3D mesh of a brain. F. Visualization of thousands of molecules with the technique of fake impostors (each atom is point sprite rendered with a fragment-shader-based ray tracing implementation).
