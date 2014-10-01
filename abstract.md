@@ -26,17 +26,19 @@ In this chapter, we will present the different techniques we have been developin
 
 The first approach consists of letting the server render the scene locally and send the raster images to the browser in real-time. This technique may be useful on low-end clients.
 
-In the second approach, the server emits OpenGL command calls that are proxied to the Web browser. The browser renders the scene by executing these commands through WebGL. This method may involve transfers of significant volumes of data. However, most of our visualization techniques involve GPU data transfers at initialization time only.
+In the second approach, the server emits OpenGL command calls that are proxied to the Web browser. The browser renders the scene by executing these commands through WebGL. This method may involve transfers of significant volumes of data. However, most of our visualization techniques involve GPU data transfers at initialization time only. This is the main and most useful approach.
 
-In the last approach, the server exports an entire visualization to a standalone interactive HTML/JavaScript document. This method is restricted to relatively simple cases. However, users familiar with JavaScript can extend the exported document through a simple API.
+In the last approach, the server exports an entire visualization to a standalone interactive HTML/JavaScript document. This method is restricted to relatively simple cases. However, users familiar with JavaScript can extend the exported document through a simple API. This approach is useful when an interactive visualization is needed in absence of a Python server.
 
 The last two approaches feature a new intermediate-level representation of all OpenGL constructs we need in Vispy. A static visualization in this representation is described by a linear sequence of commands that instruct the interpreter to create buffers, define OpenGL programs, and draw the scene. This level of abstraction matches Vispy's object-oriented interface to OpenGL. We needed to define this new representation because the regular OpenGL API was too low-level for our needs.
 
 For interactivity, we developed a combination of Python-to-JavaScript code translation utilities, JavaScript numerical computing libraries, and high-level interactive constructs in order to export a reactive visualization from Python to JavaScript.
 
+All of these approaches are useful in different use-cases.
+
 
 ## Screenshots
 
-![Vispy screenshots](images/screenshots.png)
+TODO: a few screenshots
 
-A few examples of scientific visualizations with Vispy. A. A simple example illustrating the use of vertex and fragment shaders. B. Scatter plot with point sprites. C. High-performance multi-channel digital signal viewer: all signals are rendered with a single OpenGL API call. D. Graph rendering. E. 3D mesh of a brain. F. Visualization of thousands of molecules with the technique of fake impostors (each atom is point sprite rendered with a fragment-shader-based ray tracing implementation).
+	A few examples of scientific visualizations with Vispy. A. A simple example illustrating the use of vertex and fragment shaders. B. Scatter plot with point sprites. C. High-performance multi-channel digital signal viewer: all signals are rendered with a single OpenGL API call. D. Graph rendering. E. 3D mesh of a brain. F. Visualization of thousands of molecules with the technique of fake impostors (each atom is point sprite rendered with a fragment-shader-based ray tracing implementation).
