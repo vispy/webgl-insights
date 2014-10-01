@@ -5,7 +5,7 @@ Proposal for the [WebGL Insights](http://www.webglinsights.com/) community book.
 ## Authors
 
 * Cyrille Rossant (University College London)
-* Almar Klein ()
+* Almar Klein (Cinoptics)
 * Luke Campagnola ()
 * Eric Larson ()
 * Nicolas Rougier (INRIA)
