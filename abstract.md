@@ -6,8 +6,8 @@ Proposal for the [WebGL Insights](http://www.webglinsights.com/) community book.
 
 * Cyrille Rossant (University College London)
 * Almar Klein (Cinoptics)
-* Luke Campagnola ()
-* Eric Larson ()
+* Luke Campagnola (University of North Carolina at Chapel Hill)
+* Eric Larson (University of Washington)
 * Nicolas Rougier (INRIA)
 * Kenneth D. Harris (University College London)
 
