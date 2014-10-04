@@ -37,16 +37,16 @@ For interactivity, we developed a combination of Python-to-JavaScript code trans
 
 ## Screenshots
 
+> Scatter plot with point sprites
+
 ![Scatter plot](images/points.png)
 
-> Scatter plot with point sprites
+> Multiple signals displayed efficiently with a single OpenGL API call (placement computed in the vertex shader, clipping in the fragment shadder).
     
 ![Signals](images/signals.png)
 
-> Multiple signals displayed efficiently with a single OpenGL API call (placement computed in the vertex shader, clipping in the fragment shadder).
+> A 3D model of a brain.
 
 ![3D model of a brain](images/brain.png)
-
-> A 3D model of a brain.
 
 More examples can be found [in the gallery](http://vispy.org/gallery.html).
