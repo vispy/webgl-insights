@@ -4,12 +4,12 @@ Proposal for the [WebGL Insights](http://www.webglinsights.com/) community book.
 
 ## Authors
 
-* Cyrille Rossant (University College London)
-* Almar Klein (Cinoptics)
-* Luke Campagnola (University of North Carolina at Chapel Hill)
-* Eric Larson (University of Washington)
-* Nicolas Rougier (INRIA)
-* Kenneth D. Harris (University College London)
+* [Cyrille Rossant](http://cyrille.rossant.net/) (University College London)
+* [Almar Klein](http://www.almarklein.org/) (Cinoptics)
+* [Luke Campagnola](http://luke.campagnola.me) (University of North Carolina at Chapel Hill)
+* [Eric Larson](http://staff.washington.edu/larsoner/) (University of Washington)
+* [Nicolas Rougier](http://www.loria.fr/~rougier/) (INRIA)
+* [Kenneth D. Harris](https://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02) (University College London)
 
 
 ## Abstract
@@ -28,7 +28,7 @@ The first approach consists of letting the server render the scene locally and s
 
 In the second approach, the server emits OpenGL command calls that are proxied to the Web browser. The browser renders the scene by executing these commands through WebGL. This method may involve transfers of significant volumes of data. However, most of our visualization techniques involve GPU data transfers at initialization time only. This is the main and most useful approach.
 
-In the third approach, the server exports an entire visualization to a standalone interactive HTML/JavaScript document. This method is restricted to relatively simple cases. However, users familiar with JavaScript can extend the exported document through a simple API. This approach is useful when an interactive visualization is needed in absence of a Python server.
+In the third approach, the server exports an entire visualization to a standalone interactive HTML/JavaScript/WebGL document. This method is restricted to relatively simple cases. However, users familiar with JavaScript can extend the exported document through a simple API. This approach is useful when an interactive visualization is needed in absence of a Python server.
 
 The last two approaches feature GLIR (OpenGL Intermediate Representation), a new intermediate-level representation of all OpenGL constructs we need in Vispy. A static visualization in this representation is described by a linear sequence of commands that instruct the interpreter to create buffers, define OpenGL programs, and draw the scene. This level of abstraction matches Vispy's object-oriented interface to OpenGL. We needed to define this new representation because the regular OpenGL API was too low-level for our needs. In particular, GLIR commands do not return any values, which makes it possible to evaluate them asynchronously.
 
