@@ -18,7 +18,7 @@ The deluge of data arising in many disciplines calls for modern, innovative anal
 
 Modern datasets may be large and high-dimensional, thus no static two-dimensional image can possibly convey all relevant information. A common technique is to create *interactive* visualizations, where the user can explore the various dimensions and subsets of the data. For such data exploration to be most effective, the rendering framerate need to be optimal even with very large datasets. Finally, big data visualization methods need to support distributed and remote technologies in order to scale to huge datasets stored in cloud architectures.
 
-We developed specific rendering techniques with OpenGL ES 2.0 to leverage the computational power of graphics hardware for interactive big data visualization. We implemented these techniques in a Python library called Vispy. Python is one of the leading open source platforms for data analysis and numerical computing. Whereas there are many visualization and plotting libraries in Python, Vispy is one of the first libraries that lets scientists visualize millions of data points interactively at an optimal framerate. Vispy supports many types of datasets: scatter plots, digital signals, images, 3D models, and many others. Its flexible and layered architecture allows for the creation of custom visuals and rendering techniques like volume rendering or ray tracing. Vispy notably features an object-oriented interface to OpenGL that considerably simplifies the standard OpenGL API for the most common use-cases.
+We developed specific rendering techniques with OpenGL ES 2.0 to leverage the computational power of graphics hardware for interactive big data visualization [Rossant and Harris, 2013]. We implemented these techniques in a Python library called Vispy [Klein et al., 2014]. Python is one of the leading open source platforms for data analysis and numerical computing [Oliphant, 2007]. Whereas there are many visualization and plotting libraries in Python, Vispy is one of the first libraries that lets scientists visualize millions of data points interactively at an optimal framerate. Vispy supports many types of datasets: scatter plots, digital signals, images, 3D models, and many others. Vispy focuses on high performance, scalability to datasets containing millions of points, and high quality through a GLSL implementation of Antigrain Geometry [Shemanarev]. Its flexible and layered architecture allows for the creation of custom visuals and rendering techniques like volume rendering or ray tracing. Vispy notably features an object-oriented interface to OpenGL that considerably simplifies the standard OpenGL API for the most common use-cases.
 
 Whereas Python is an excellent platform for data analysis, it lags behind the Web browser when it comes to remote visualization and sharing of interactive analysis reports. The need for remote data access is all the more critical that the size of common datasets increases faster than transfer speeds. Therefore, it is common practice for large datasets to be stored in the cloud, while analysts visualize the data remotely through the Web browser on a desktop or mobile device.
 
@@ -50,3 +50,15 @@ A 3D model of a brain:
 ![3D model of a brain](images/brain.png)
 
 More examples can be found [in the gallery](http://vispy.org/gallery.html).
+
+
+## References
+
+
+* Almar Klein et al. (2014). Vispy 0.3.0. ZENODO.
+
+* Oliphant, T. E. (2007). Python for scientific computing. Computing in Science & Engineering, 9(3), 10-20.
+
+* Rossant, C., & Harris, K. D. (2013). Hardware-accelerated interactive data visualization for neuroscience in Python. Frontiers in neuroinformatics, 7.
+
+* Shemanarev, M. The anti-grain geometry project.
