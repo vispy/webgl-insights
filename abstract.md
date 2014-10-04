@@ -37,6 +37,16 @@ For interactivity, we developed a combination of Python-to-JavaScript code trans
 
 ## Screenshots
 
-TODO: a few screenshots
+![Scatter plot](images/points.png)
 
-> A few examples of scientific visualizations with Vispy. A. A simple example illustrating the use of vertex and fragment shaders. B. Scatter plot with point sprites. C. High-performance multi-channel digital signal viewer: all signals are rendered with a single OpenGL API call. D. Graph rendering. E. 3D mesh of a brain. F. Visualization of thousands of molecules with the technique of fake impostors (each atom is point sprite rendered with a fragment-shader-based ray tracing implementation).
+> Scatter plot with point sprites
+    
+![Signals](images/signals.png)
+
+> Multiple signals displayed efficiently with a single OpenGL API call (placement computed in the vertex shader, clipping in the fragment shadder).
+
+![3D model of a brain](images/brain.png)
+
+> A 3D model of a brain.
+
+More examples can be found [in the gallery](http://vispy.org/gallery.html).
