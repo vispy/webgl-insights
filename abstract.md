@@ -2,14 +2,15 @@
 
 Proposal for the [WebGL Insights](http://www.webglinsights.com/) community book.
 
+
 ## Authors
 
 * [Cyrille Rossant](http://cyrille.rossant.net/) (University College London)
 * [Almar Klein](http://www.almarklein.org/) (Cinoptics)
 * [Luke Campagnola](http://luke.campagnola.me) (University of North Carolina at Chapel Hill)
 * [Eric Larson](http://staff.washington.edu/larsoner/) (University of Washington)
-* [Nicolas Rougier](http://www.loria.fr/~rougier/) (INRIA)
 * [Kenneth D. Harris](https://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02) (University College London)
+* [Nicolas Rougier](http://www.loria.fr/~rougier/) (INRIA)
 
 
 ## Abstract
@@ -54,11 +55,7 @@ More examples can be found [in the gallery](http://vispy.org/gallery.html).
 
 ## References
 
-
-* Almar Klein et al. (2014). Vispy 0.3.0. ZENODO.
-
+* [Almar Klein et al. (2014). Vispy 0.3.0. ZENODO.](http://zenodo.org/record/11532#.VDPf2HV_upc)
 * Oliphant, T. E. (2007). Python for scientific computing. Computing in Science & Engineering, 9(3), 10-20.
-
-* Rossant, C., & Harris, K. D. (2013). Hardware-accelerated interactive data visualization for neuroscience in Python. Frontiers in neuroinformatics, 7.
-
-* Shemanarev, M. The anti-grain geometry project.
+* Rossant, C., & Harris, K. D. (2013). [Hardware-accelerated interactive data visualization for neuroscience in Python](http://journal.frontiersin.org/Journal/10.3389/fninf.2013.00036/full). Frontiers in neuroinformatics, 7.
+* Shemanarev, M. [The anti-grain geometry project](http://www.antigrain.com/).
