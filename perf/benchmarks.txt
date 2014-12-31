@@ -11,6 +11,8 @@ Version             : 3.0 Mesa 10.5.0-devel
 
 ## Benchmarks
 
+n = 10M points
+
 ### Raw OpenGL
 
 test_gl.py
