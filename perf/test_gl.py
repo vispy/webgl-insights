@@ -1,4 +1,6 @@
 import numpy as np
+from numpy.random import RandomState
+prng = RandomState(20150101)
 import timeit
 from vispy import app
 from vispy.gloo import gl
@@ -40,7 +42,7 @@ class Canvas(app.Canvas):
 
         n = 10000000
         self.data = np.zeros((n, 4), dtype=np.float32)
-        self.data[:, :2] = .15 * np.random.randn(n, 2)
+        self.data[:, :2] = .15 * prng.randn(n, 2)
         self.data[:, 3] = 1.
         vbuffer = gl.glCreateBuffer()
         gl.glBindBuffer(gl.GL_ARRAY_BUFFER, vbuffer)
