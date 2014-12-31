@@ -4,6 +4,7 @@ prng = RandomState(20150101)
 import timeit
 from vispy import app
 from vispy.gloo import gl
+app.use_app('glfw')
 
 vertex_code = """
 attribute vec4 a_position;
@@ -78,9 +79,11 @@ class Canvas(app.Canvas):
 
 def compute_fps(times):
     times = np.array(times)
-    fps1 = len(times) / (times[-1] - times[0])
-    fps2 = 1 / np.median(np.diff(times))
-    return (fps1, fps2)
+    times -= times[0]
+    dtimes = np.diff(times)
+    fps = len(times) / (times[-1])
+    std = np.mean(np.abs(dtimes - np.median(dtimes))) * fps
+    return (fps, std)
 
 if __name__ == '__main__':
     c = Canvas()

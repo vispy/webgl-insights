@@ -11,17 +11,18 @@ Version             : 3.0 Mesa 10.5.0-devel
 
 ## Benchmarks
 
-n = 10M points
+N = 10M points
+glfw backend
 
 ### Raw OpenGL
 
 test_gl.py
-44.29 FPS
+42.53 +/- 2.7% FPS
 
 ### gloo/glir
 
 test_gloo.py
-43.95 FPS
+41.98 +/- 3.1% FPS
 
 ### WebGL
 
