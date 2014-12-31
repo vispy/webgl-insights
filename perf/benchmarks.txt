@@ -23,3 +23,7 @@ test_gl.py
 test_gloo.py
 43.95 FPS
 
+### WebGL
+
+test_webgl.ipynb
+Delay between JS update() and WebGL update (include round-trip to Python through GLIR): 22 ms
